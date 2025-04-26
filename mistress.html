@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Siren's Dungeon | Premium Findom Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A154B", secondary: "#DC143C" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #1a1a1a;
+        color: #fffff0;
+        overflow-x: hidden;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+      }
+
+      .hero {
+        perspective: 1000px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .parallax-container {
+        transform-style: preserve-3d;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 300px; /* Adjust this to match your nav height */
+}
+
+      .bg-layer {
+        position: absolute;
+        width: 120%;
+        height: 120%;
+        top: -10%;
+        left: -10%;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.1s ease-out;
+        will-change: transform;
+      }
+
+      .particle {
+        position: absolute;
+        width: 2px;
+        height: 2px;
+        background: rgba(255, 215, 0, 0.5);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 1;
+      }
+
+      .content-layer {
+        position: relative;
+        z-index: 3;
+      }
+
+      .gold-text {
+        color: #ffd700;
+      }
+      .gold-border {
+        border-color: #ffd700;
+      }
+      .gold-glow {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+      }
+      .purple-glow {
+        box-shadow: 0 0 15px rgba(74, 21, 75, 0.5);
+      }
+      .crimson-glow {
+        box-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: #ffd700;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      .gradient-overlay {
+        background: linear-gradient(
+          45deg,
+          rgba(74, 21, 75, 0.4) 0%,
+          rgba(220, 20, 60, 0.2) 100%
+        );
+      }
+      .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 1s ease forwards;
+          }
+     
+          .fade-in-up.delay-200 {
+            animation-delay: 0.3s;
+          }
+      
+          @keyframes fadeUp {
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+      
+          .gold-glow {
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 0 60px rgba(255, 215, 0, 0.2);
+          }
+      
+          .glow-text {
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.6), 0 0 20px rgba(255, 215, 0, 0.4);
+          }
+          .custom-line-height {
+            line-height: 4.75; /* Adjust this value as needed */
+          }
+          
+      .card {
+          background: linear-gradient(135deg, rgba(40, 40, 40, 0.9), rgba(20, 20, 20, 0.9));
+          border: 1px solid rgba(255, 215, 0, 0.2);
+          transition: all 0.3s ease;
+      }
+
+      .card:hover {
+          transform: translateY(-5px);
+          border: 1px solid rgba(255, 215, 0, 0.5);
+          box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 w-full z-50 bg-opacity-80 backdrop-blur-md bg-black border-b border-[#FFD700]/20"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="font-['Pacifico'] text-2xl text-[#FFD700]"
+          >Siren's Dungeon</a
+        >
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#home"
+            class="nav-link text-[#FFFFF0] hover:text-[#FFD700] transition-colors"
+            >Home</a
+          >
+          <a
+            href="#experience"
+            class="nav-link text-[#FFFFF0] hover:text-[#FFD700] transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#services"
+            class="nav-link text-[#FFFFF0] hover:text-[#FFD700] transition-colors"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-[#FFFFF0] hover:text-[#FFD700] transition-colors"
+            >Contact</a
+          >
+        </div>
+        <div class="md:hidden w-8 h-8 flex items-center justify-center">
+          <i class="ri-menu-line ri-lg text-[#FFD700]"></i>
+        </div>
+        <a
+          href="#contact"
+          class="hidden md:block px-6 py-2 bg-gradient-to-r from-[#4A154B] to-[#DC143C] text-[#FFFFF0] !rounded-button font-medium hover:gold-glow whitespace-nowrap"
+        >
+        WELCOME
+        </a>
+      </div>
+    </nav>
+
+
+
+    <nav class="fixed top-0 left-0 w-full z-50 bg-opacity-80 backdrop-blur-md bg-black border-b border-[#FFD700]/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+          <a href="#" class="font-['Pacifico'] text-2xl text-[#FFD700]">
+            Siren's Dungeon
+          </a>
+          <div class="hidden md:flex space-x-8">
+            <a href="#home" class="nav-link text-[#FFFFF0] hover:text-[#FFD700] transition-colors">
+              Home
+            </a>
+            <a href="#experience" class="nav-link text-[#FFFFF0] hover:text-[#FFD700] transition-colors">
+              Experience
+            </a>
+            <a href="#services" class="nav-link text-[#FFFFF0] hover:text-[#FFD700] transition-colors">
+              Services
+            </a>
+            <a href="#contact" class="nav-link text-[#FFFFF0] hover:text-[#FFD700] transition-colors">
+              Contact
+            </a>
+          </div>
+          <!-- Hamburger Icon for Mobile -->
+          <div class="md:hidden w-8 h-8 flex items-center justify-center" id="hamburgerMenuButton">
+            <i class="ri-menu-line ri-lg text-[#FFD700]"></i>
+          </div>
+          <div class="md:hidden hidden" id="mobileMenu">
+            <a href="#home" class="block text-[#FFFFF0] py-2 text-center hover:text-[#FFD700]">Home</a>
+            <a href="#experience" class="block text-[#FFFFF0] py-2 text-center hover:text-[#FFD700]">Experience</a>
+            <a href="#services" class="block text-[#FFFFF0] py-2 text-center hover:text-[#FFD700]">Services</a>
+            <a href="#contact" class="block text-[#FFFFF0] py-2 text-center hover:text-[#FFD700]">Contact</a>
+          </div>
+          <a href="#contact" class="hidden md:block px-6 py-2 bg-gradient-to-r from-[#4A154B] to-[#DC143C] text-[#FFFFF0] !rounded-button font-medium hover:gold-glow whitespace-nowrap">
+            WELCOME
+          </a>
+        </div>
+      </nav>
+      
+      <script>
+        const hamburgerButton = document.getElementById('hamburgerMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+      
+        hamburgerButton.addEventListener('click', () => {
+          mobileMenu.classList.toggle('hidden');
+        });
+      </script>
+
+    <!-- Hero Section -->
+    <section  class="hero min-h-screen flex items-center">
+      <!-- 3D Background Layers -->
+      <div class="parallax-container" id="parallaxContainer">
+        <div class="bg-layer gradient-overlay" data-depth="0.1"></div>
+        <div
+          class="bg-layer"
+          style="
+            background-image: url('https://readdy.ai/api/search-image?query=A%20luxurious%20gothic%20dungeon%20interior%20with%20dramatic%20lighting');
+          "
+          data-depth="0.1"
+        ></div>
+        <div
+          class="bg-layer"
+          style="
+            background-image: url('f17972cde416dd4b2a057b7dc927099d\ \(1\).jpg');
+          "
+          data-depth="0.1"
+        ></div>
+      </div>
+
+      <!-- Particles -->
+      <div id="particleContainer " class="parallax-container"></div>
+
+      <!-- Content -->
+      <div id="home" class="content-layer container mx-auto px-6 z-10 w-full">
+        <div class="max-w-3xl relative">
+          <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            Welcome to <span class="text-[#FFD700]">Siren's Dungeon</span>
+          </h1>
+          <p class="text-xl md:text-2xl mb-8 text-[#FFFFF0]/90">
+            Experience the ultimate in luxury domination. Where power, elegance,
+            and submission converge in perfect harmony.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#services"
+              class="px-8 py-3 bg-[#DC143C] text-[#FFFFF0] !rounded-button font-medium hover:crimson-glow whitespace-nowrap text-center"
+            >
+              Explore Experience
+            </a>
+        
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+
+<!-- hell -->
+
+
+<section id="about " class="py-20 relative">
+    <!-- 3D Particle Canvas (background) -->
+    <div class="pointer-events-none absolute inset-0 z-0">
+        <canvas id="threeCanvas" class="w-full h-full"></canvas>
+    </div>
+
+    <!-- Main content of the About section -->
+    <div id="experience" class="container mx-auto px-6 relative z-10">
+        <div class="flex flex-col md:flex-row gap-12 items-center fade-in-up">
+            <div id="particleContainer" class="parallax-container"></div>
+
+            <div class="md:w-1/2">
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-[#FFD700] glow-text">
+                    The Queen's Domain
+                </h2>
+                <div class="h-1 w-24 bg-gradient-to-r from-[#FFD700] via-[#DC143C] to-[#4A154B] mb-8 rounded-full"></div>
+                <p class="mb-6 text-xl text-[#FFFFF0] glow-text custom-line-height" style="line-height: 40px;">
+                    Delhi's reigning Goddess, Her HIGHNESS. A 25-year-old professional dominatrix with a 5-year legacy of captivating souls. I possess a unique blend of wisdom, beauty, and confidence that draws you in.
+                    You've arrived at the pinnacle of intelligent and creative domination. I am your guide into a realm of meticulously crafted experiences, meticulously designed to fulfill your deepest desires and ignite your most fervent fantasies. Explore this space, submissives. 💎 Submit to Your Findom Goddess! 👠
+                </p>
+            </div>
+
+            <!-- Image with Tilt -->
+            <div class="md:w-1/2 relative fade-in-up delay-200">
+                <div class="overflow-hidden rounded-2xl gold-glow border-2 border-[#FFD700]/40 relative group" data-tilt data-tilt-max="5" data-tilt-speed="300" data-tilt-perspective="1200">
+                    <img
+                        src="domme3.png"
+                        alt="Mistress Siren"
+                      class="object-cover w-full h-[700px] object-top"
+                    />
+                    <div class="absolute inset-0 border-4 border-[#FFD700]/20 rounded-2xl animate-pulse pointer-events-none"></div>
+
+                    <div class="absolute inset-0 flex items-center justify-center text-4xl font-bold text-[#FFD700] opacity-0 group-hover:opacity-100 transition-opacity duration-300 glow-text">
+                        Welcome to Siren's Dungeon
+                    </div>
+                </div>
+
+                <!-- Corners -->
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 border-r-2 border-b-2 border-[#FFD700] opacity-30"></div>
+                <div class="absolute -top-6 -left-6 w-32 h-32 border-l-2 border-t-2 border-[#FFD700] opacity-30"></div>
+            </div>
+        </div>
+    </div>
+
+  
+
+
+
+
+<!-- newsection -->
+<section id="services" class="py-20 bg-[#121212]">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-4 text-[#FFD700]">
+      Her Dungeon, Your Destiny
+    </h2>
+    <p class="text-xl text-center mb-16 max-w-3xl mx-auto">
+      Descend into the depths of her dominion, where darkness wraps around devotion,
+      and every whisper of obedience seals your fate in her eternal reign.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="card p-8 !rounded-xl relative overflow-hidden">
+        <div
+          class="absolute top-0 right-0 w-16 h-16 flex items-center justify-center text-[#FFD700]"
+        >
+          <i class="ri-crown-line ri-2x"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-[#FFD700]">
+          Chains of Tribute
+        </h3>
+        <p class="mb-6">
+          Your offerings are the iron links that bind you to her will. Each
+          tribute deepens your captivity, a symbol of loyalty forged in the fires
+          of submission.
+        </p>
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 flex items-center justify-center bg-[#4A154B] !rounded-full mr-4"
+          >
+            <i class="ri-handcuffs-line text-[#FFD700]"></i>
+          </div>
+          <p>Tributes that tighten the bond</p>
+        </div>
+      </div>
+
+      <div class="card p-8 !rounded-xl relative overflow-hidden">
+        <div
+          class="absolute top-0 right-0 w-16 h-16 flex items-center justify-center text-[#FFD700]"
+        >
+          <i class="ri-lock-line ri-2x"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-[#FFD700]">
+          Rituals of Obedience
+        </h3>
+        <p class="mb-6">
+          Submission is sculpted through sacred rites. Every command, every
+          silence, etches your place deeper into her empire of control.
+        </p>
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 flex items-center justify-center bg-[#4A154B] !rounded-full mr-4"
+          >
+            <i class="ri-ancient-gate-line text-[#FFD700]"></i>
+          </div>
+          <p>Sacred acts of surrender</p>
+        </div>
+      </div>
+
+      <div class="card p-8 !rounded-xl relative overflow-hidden">
+        <div
+          class="absolute top-0 right-0 w-16 h-16 flex items-center justify-center text-[#FFD700]"
+        >
+          <i class="ri-vip-crown-line ri-2x"></i>
+        </div>
+        <h3 class="text-2xl font-bold mb-4 text-[#FFD700]">
+          Throne of Shadows
+        </h3>
+        <p class="mb-6">
+          In the heart of her domain, you exist to exalt her splendor.
+          Your loyalty feeds the darkness she rules, a never-ending devotion
+          to the Queen of Shadows.
+        </p>
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 flex items-center justify-center bg-[#4A154B] !rounded-full mr-4"
+          >
+            <i class="ri-vip-diamond-line text-[#FFD700]"></i>
+          </div>
+          <p>Service at the feet of royalty</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- 🌟 Footer Section with Fixed Icons -->
+
+<!-- 🌟 Footer Section with Real X Logo and Email -->
+
+<footer id="contact" class="py-12 bg-black text-center relative mt-20">
+  <h3 class="text-4xl font-extrabold text-[#FFD700] glow-text mb-4 tracking-wide">Let Me Own You</h3>
+  <p class="text-[#FFFFF0] text-lg mb-10">
+    Submit beyond words. Connect with Your Queen.
+  </p>
+
+  <!-- ✨ Social Media Links -->
+  <div class="flex items-center justify-center gap-12 mb-6">
+      <!-- X Logo (New Twitter) -->
+      <a href="https://x.com/Siren_Of_Riches?s=09" target="_blank" class="text-[#FFD700] hover:text-[#DC143C] text-5xl transition transform hover:scale-125 duration-300">
+          <i class="fab fa-x-twitter"></i>
+      </a>
+
+      <!-- Email Icon -->
+      <a href="mailto:funwithfeetfooties@gmail.com" class="text-[#FFD700] hover:text-[#DC143C] text-5xl transition transform hover:scale-125 duration-300">
+          <i class="fas fa-envelope"></i>
+      </a>
+  </div>
+
+  <p class="text-sm text-[#666666] mt-8 tracking-wide">
+    © 2025 Findom Queen. All rights reserved.
+  </p>
+</footer>
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.3/vanilla-tilt.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r148/three.min.js"></script>
+<script>
+    const canvas = document.getElementById('threeCanvas');
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 150;
+
+    // Create particle system
+    const particlesCount = 1000;
+    const posArray = new Float32Array(particlesCount * 3);
+    for (let i = 0; i < particlesCount * 3; i++) {
+        posArray[i] = (Math.random() - 0.5) * 300;
+    }
+
+    const geometry = new THREE.BufferGeometry();
+    geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+    const material = new THREE.PointsMaterial({
+        size: 2,
+        color: 0xffd700,
+        transparent: true,
+        opacity: 0.7,
+    });
+
+    const particles = new THREE.Points(geometry, material);
+    scene.add(particles);
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+    });
+
+    function animate() {
+        requestAnimationFrame(animate);
+        particles.rotation.x += 0.0008;
+        particles.rotation.y += 0.0012;
+
+        camera.position.x += (mouseX * 50 - camera.position.x) * 0.05;
+        camera.position.y += (mouseY * 50 - camera.position.y) * 0.05;
+        camera.lookAt(scene.position);
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
+
+    window.addEventListener("resize", () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+</script>
+</section>
+
+
+    <script>
+      // 3D Parallax Effect
+      function updateParallax(e) {
+        const container = document.getElementById("parallaxContainer");
+        const layers = container.getElementsByClassName("bg-layer");
+        const x = (window.innerWidth - e.clientX * 2) / 25;
+        const y = (window.innerHeight - e.clientY * 2) / 25;
+
+        Array.from(layers).forEach((layer) => {
+          const depth = parseFloat(layer.getAttribute("data-depth"));
+          layer.style.transform = `
+            translate3d(${x * depth}px, ${y * depth}px, 0)
+            rotateX(${y * depth * 0.1}deg)
+            rotateY(${x * depth * 0.1}deg)
+          `;
+        });
+      }
+
+      // Particle System
+      function createParticles() {
+        const container = document.getElementById("particleContainer");
+        for (let i = 0; i < 100; i++) {
+          const particle = document.createElement("div");
+          particle.className = "particle";
+          particle.style.left = Math.random() * 100 + "%";
+          particle.style.top = Math.random() * 100 + "%";
+          particle.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
+          particle.setAttribute("data-speed", Math.random() * 0.3 + 0.1);
+          container.appendChild(particle);
+        }
+      }
+
+      function updateParticles(e) {
+        const particles = document.getElementsByClassName("particle");
+        Array.from(particles).forEach((particle) => {
+          const speed = parseFloat(particle.getAttribute("data-speed"));
+          const xOffset = (window.innerWidth / 2 - e.clientX) * speed;
+          const yOffset = (window.innerHeight / 2 - e.clientY) * speed;
+          particle.style.transform = `translate(${xOffset}px, ${yOffset}px)`;
+        });
+      }
+
+      // Event Listeners
+      document.addEventListener("mousemove", (e) => {
+        updateParallax(e);
+        updateParticles(e);
+      });
+
+      // Initialization
+      document.addEventListener("DOMContentLoaded", () => {
+        createParticles();
+
+      });
+      document.querySelector('a[href="#home"]').addEventListener('click', function(e) {
+  e.preventDefault(); // Prevent the default anchor behavior
+  window.scrollTo({
+    top: "-1000px",
+    behavior: 'smooth'
+  });
+});
+    </script>
+  </body>
+</html>
